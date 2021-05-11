@@ -1,0 +1,109 @@
+.donation-page {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(238, 149, 108, 0.534),
+      rgba(206, 206, 21, 0.315)
+    ),
+    url("../material/cancer2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sansita Swashed";
+}
+
+form {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1.heading {
+  font-family: "Grenze Gotisch", cursive;
+  position: relative;
+  font-size: 50px;
+  letter-spacing: 0.8mm;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, green, white);
+  opacity: 0;
+  text-align: center;
+  top: 8px;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+}
+.hr {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  box-shadow: 0px 1px 8px 1px lemonchiffon;
+  width: 70vw;
+  height: 5.1px;
+  background: linear-gradient(to right, blue, rgb(221, 19, 19));
+  border-radius: 7px;
+}
+.description {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  font-family: "Sansita Swashed";
+  letter-spacing: 0.4mm;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.form {
+  opacity: 1;
+  height: 80vh;
+  width: 100vw;
+  border-radius: 7px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px 6px rgba(234, 238, 233, 0.479);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 10;
+}
+
+.form > * {
+  width: 80%;
+}
+
+input {
+  height: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+span {
+  color: rgba(252, 162, 17);
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 120%;
+  }
+  h1.heading {
+    font-size: 32px;
+  }
+  .form .description {
+    font-size: 12px;
+    letter-spacing: 0.3mm;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}

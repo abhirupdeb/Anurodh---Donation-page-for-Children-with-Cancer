@@ -1,0 +1,293 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  position: relative;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 6px;
+}
+nav {
+  height: 9vh;
+  width: 100%;
+  background: linear-gradient(
+    -65deg,
+    rgba(0, 0, 255, 0.6),
+    rgb(255, 0, 0, 0.89)
+  );
+  position: relative;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+}
+
+.headText {
+  margin-left: 2rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(-20px, -50%);
+  transition: opacity 250ms ease;
+  font-weight: 800;
+  font-size: xx-large;
+  letter-spacing: 0.8mm;
+  font-family: "Grenze Gotisch", cursive;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+}
+
+.navlinks li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  transition: all 250ms ease;
+}
+
+.navlinks li:hover {
+  border: 3px solid white;
+  border-radius: 3px;
+  transition: all 250ms ease;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.5mm;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  animation: image 4s linear infinite 3s alternate;
+}
+.first {
+  transition: linear;
+}
+@keyframes image {
+  0% {
+    background-image: url("../material/cancer1.jpg");
+  }
+  32% {
+    background-image: url("../material/cancer2.jpg");
+  }
+  54% {
+    background-image: url("../material/cancer3.png");
+  }
+  100% {
+    background-image: url("../material/cancer4.jpg");
+  }
+}
+
+.first-heading {
+  font-size: 3em;
+  letter-spacing: 0.8mm;
+}
+
+.first-subtext {
+  margin: 1em;
+  font-weight: 400;
+}
+
+.text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #0ee64e, red);
+}
+.text2 {
+  letter-spacing: 0.5mm;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #e60e0e, black);
+  font-weight: 800;
+  font-size: 17.5px;
+}
+
+#donate {
+  margin-top: 65px;
+  z-index: 0;
+}
+#donate a {
+  font-size: 20px;
+  padding: 16px;
+  letter-spacing: 0.4mm;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: 300ms ease;
+
+  position: relative;
+  color: #f5f5f5;
+  height: 70px;
+  width: 220px;
+  display: block;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    115deg,
+    #0eeb45,
+    #eb7210,
+    #e615c3,
+    #122afe,
+    #18f5e2
+  );
+}
+
+#donate a:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0px 0px 18px 12px lemonchiffon;
+  animation: rotate 0.4s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+#donate a:focus {
+  outline: none;
+}
+#donate a span {
+  height: 88%;
+  width: 96%;
+  background: #111;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  line-height: 62px;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .animate {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  .animate2 {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  .first {
+    z-index: -12;
+  }
+  .first-heading {
+    font-size: 2em;
+    transition: all 500ms 0.4s;
+  }
+  .first-subtext {
+    transition: all 500ms 0.6s;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 999;
+  }
+  #donate {
+    z-index: -10;
+  }
+  .navlinks {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(20, 33, 61, 0.85);
+    flex-direction: column;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .navlinks.open {
+    clip-path: circle(1200px at 90% -20%);
+    -webkit-clip-path: circle(1200px at 90% -20%);
+    pointer-events: all;
+  }
+  .navlinks li {
+    opacity: 0;
+  }
+  .navlinks li a {
+    font-size: 25px;
+  }
+  .navlinks li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .navlinks li:nth-child(2) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .navlinks li:nth-child(3) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .navlinks li:nth-child(4) {
+    transition: all 0.5s ease 0.2s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .headText {
+    font-size: 1em;
+  }
+  .first-heading {
+    font-size: 1.5em;
+  }
+  .first-subtext {
+    margin-top: 1rem;
+    font-size: 0.5em;
+  }
+}
+
+/* Shadow Button Copy */
